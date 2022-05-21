@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+#navbar{
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+#navbar img{
+    width: 8vw;
+    border-radius: 100px;
+}
+#navbar ul{
+    display: flex;
+}
+header{
+    position: sticky;
+    top: 0px;
+}
+#navbar .search input {
+    width: 30vw;
+    height: 3vh;
+    border-radius: 10px;
+    padding:0px  1vw;
+    background-color: white;
+    color: black;
+}
+#navbar .search input:hover{
+    background-color: gray;
+    color: black;
+}
+#navbar ul li{
+    padding: 2vw 3vw;
+    list-style: none;
+}
+#navbar ul li a{
+    position: relative;
+    text-decoration: none;
+    padding:0px  0.5vw;
+    font-size: large;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    color: transparent;
+}
+#navbar ul li a:hover{
+    border-radius: 10px;
+    padding:0px  0.5vw;
+    box-shadow: 0 0 5px pink , 0 0 20px pink , 0 0 60px pink , 0 0 20px pink;
+}
+#navbar ul li a:hover::before{
+    width: 100%;
+}
+    
+
+#navbar ul li a::before{
+    content: attr(data-text);
+    position:absolute;
+    color: aliceblue;
+    width: 0%;
+    overflow: hidden;
+    transition: 1s;
+}
+#navbar::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(4, 1, 15);
+    z-index: -1;
+    width: 98.8%;
+    height: 15vh;
+    opacity: 0.6;
+    padding: 0px 10px;
+}
+#NAME-BRANCH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    /* background-color: grey; */
+}
+#NAME-BRANCH .name,.branch{
+    padding: 2vw;
+    margin: 2vw;
+    box-shadow:0 0 2vw darkslategray;
+}
+#NAME-BRANCH::before{
+    content:"" ;
+    background: grey;
+    position: absolute;
+    width:100%;
+    height: 20vh;
+    opacity: 0.5;
+    z-index: -1;
+
+}
+@keyframes slide1 {
+    0%{
+        transform: translate(-18vw);
+    }
+    100%{
+        transform: translate(90vw);
+    }
+}
+.name-branch{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    /* transform: translate(-20vw); */
+    animation: text 10s linear 5s infinite alternate;
+    
+}
+@keyframes text {
+    0%{
+        color: black;
+    }
+    30%{
+        letter-spacing: 0.8vw;
+    }
+    85%{
+        letter-spacing: 0.5vw;
+    }
+}
+.name{
+    border:2px  solid black;
+    border-radius: 2vw;
+}
+.branch{
+    border: 2px solid black;
+    border-radius: 2vw;
+}
+#nb .details p{
+    font-size: larger;
+    font-weight: 500;
+}
+#nb .details{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin: 1.5vw 0vw 1.5vw 0px;
+    transform: translateX(3vw) translateY(3vh);
+    padding: 2vw;
+}
+@keyframes slide2 {
+    0%{
+        /* background-color:rgb(122, 122, 122); */
+        color: pink;
+    }
+    50%{
+        /* background-color: rgb(64, 56, 57); */
+        color: white;
+    
+    }
+    100%{
+        /* background-color:rgb(91, 90, 90); */
+        color: pink;
+    }
+}
+.name{
+    animation: slide2 4s linear 2s infinite running;
+}
+.branch{
+    animation: slide2 4s linear 2s infinite running;
+}
+#hb{
+    /* border: 0.3vh solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    transform: translateX(40vw) translateY(3vh);
+    border-radius: 10px;
+    padding: 0vw 0vw 1.5vw 0vw ;
+}
+.ho{
+    display: flex;
+    margin: 0 0 5vh 0;
+    border: 0.4vh solid pink;
+    border-radius: 10px;
+}
+.hob{
+    margin: 0vh 2vh;
+}
+.hob1{
+    margin: 0vh 2vh ;
+}
+.head{
+    padding: 2vw 0  0  0;
+    text-align: center;
+}
+.body{
+    padding: 1vw;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    margin: 0 0 9vh 0;
+}
+.foot{
+    height: 5vw;
+    
+    text-align: center;
+    padding: 1.5vw 0vw 0vw 0vw;
+}
+footer::before{
+    content: "";
+    position: absolute;
+    background-color: grey;
+    width: 99vw;
+    height: 8vh;
+    z-index: -1;
+    opacity: 0.6;
+}
+#nb::before{
+    content: "";
+    position: absolute;
+    background: url('lo.jpg') center/cover;
+    background-blend-mode: darken;
+    width: 97.8vw;
+    height: 135vh;
+    z-index: -1;
+    opacity: 0.5;
+    padding: 10px;
+}
+#feat{
+    border: 0.5vh solid pink;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 10vh 20vw 20vh 20vw;
+}
+#feat .head1{
+    font-size: large;
+    text-align: center;
+    font-weight: 900;
+}
+#feat .body1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: larger;
+}
+#feat .body1 ul li{
+    list-style: none;
+}
+@media screen and (max-width:1300px) {
+    #navbar ul{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:840px){
+    .name-branch h1 {
+        font-size:large;
+    }
+    .name,.branch h3{
+        font-size: small;
+    }
+    #navbar ul li a{
+        font-size: 0.7rem;
+    }
+    #navbar ul li a:hover{
+        box-shadow: pink;
+    }
+    #navbar ul li a:hover::before{
+        width: 0%;
+    }
+    .details {
+        font-size: small ;
+    }
+    .Hobbies h1{
+        font-size: 1.3rem;
+    }
+    .head{
+        font-size: 0.8rem;
+    }
+    footer{
+        margin: 0 0 6vw 0;
+    }
+    #navbar{
+        height: 10vh;
+    }
+    #nb{
+        margin: 3vh 0 0 0;
+    }
+    #navbar .search input {
+        font-size: 0.4rem;
+        letter-spacing: 0.1px;
+    }
+    .foot{
+        font-size: small;
+    }
+    #feat{
+        border: 0.5vh solid pink;
+        border-radius: 20px;
+        width: 80vw;
+        margin: 4vh 10vw 5vh 10vw;
+    } 
+    #feat .body1{
+        font-size: smaller;
+    }
+    .body{
+        font-size: smaller;
+    }
+    .hob,.hob2 li{
+        font-size: smaller;
+    }
+}
+@media screen and (max-width:700px) {
+    #navbar .search input {
+        font-size: 0.4rem;
+    }
+}
+@media screen and (max-width:483px){
+    .foot{
+        margin: 10vw 0 0 0;
+    }
+}
